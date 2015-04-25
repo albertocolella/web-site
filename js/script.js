@@ -1,13 +1,23 @@
 $(function() {
   $('body').vegas({
       slides: [
-          { src: 'themes/images/GEJ6ML9NHQ.jpg' }, // city
-         // { src: 'themes/images/643FE96E84.jpg' }, // bike
-          { src: 'themes/images/44240BF402.jpg' }, // keyboard
-          { src: 'themes/images/UXFLLKINQ1.jpg' }, // nigth
-         // { src: 'themes/images/XNZTUL720T.jpg' }, // road
-          { src: 'themes/images/board-453758.jpg' } // motherboard
-      ]
+          { src: 'themes/images/GEJ6ML9NHQ.jpg', 
+            author: '<a href="https://twitter.com/anthonydelanoix">Anthony Delanoix</a>' }, // city
+          { src: 'themes/images/44240BF402.jpg',
+            author: '<a href="http://epicantus.tumblr.com/">Daria Nepriakhina</a>' }, // keyboard
+          { src: 'themes/images/UXFLLKINQ1.jpg',
+            author: '<a href="https://instagram.com/d_n_e_b/">Daniel Bowman</a>' }, // nigth
+          { src: 'themes/images/board-453758.jpg',
+            author: '<a href="https://www.facebook.com/blickpixel">Michael Schwarzenberger</a>' } // motherboard
+      ],
+      walk: function (index, slideSettings) {
+        if(slideSettings.author){
+          var credits = '<h4>photo credits:</h4>' + slideSettings.author;
+          $(".credits").html(credits);
+        } else {
+          $(".credits").html('');
+        }
+      }
   });
   var logo_color = $('#logo').css('color');
   $('.links li').hover(
@@ -28,11 +38,12 @@ $(function() {
     "That means I do my best to help other people work better on projects using a <strong>Lean</strong> approach.",
     "Less waste + less human effort + less costs = more projects delivered in time.",
     "Click on the buttons below to get in touch with me.",
-    "I said <strong>below</strong>, please stop clicking my name!"
+    "I said <strong>below</strong>, so please stop clicking my name! ;-)"
   ];
   $('h1, h2').click(function(){
     if(lines.length>current){
-      $('.lines').show().append('<li class="line">'+lines[current]+'</li>');      
+      $('.lines').show().append('<li class="line">'+lines[current]+'</li>');
+      $('footer').css('bottom', '0px');     
     }
     current++;
     if(lines.length==current){
