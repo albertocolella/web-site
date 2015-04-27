@@ -1,5 +1,8 @@
-$(function() {
-  $('body').vegas({
+global.jQuery = require('jquery');
+require('vegas');
+
+jQuery(function() {
+  jQuery('body').vegas({
       slides: [
           { src: 'themes/images/GEJ6ML9NHQ.jpg', 
             author: '<a href="https://twitter.com/anthonydelanoix">Anthony Delanoix</a>' }, // city
@@ -13,20 +16,20 @@ $(function() {
       walk: function (index, slideSettings) {
         if(slideSettings.author){
           var credits = '<h4>photo credits:</h4>' + slideSettings.author;
-          $(".credits").html(credits);
+          jQuery(".credits").html(credits);
         } else {
-          $(".credits").html('');
+          jQuery(".credits").html('');
         }
       }
   });
-  var logo_color = $('#logo').css('color');
-  $('.links li').hover(
+  var logo_color = jQuery('#logo').css('color');
+  jQuery('.links li').hover(
     function(){
-      var bg = $(this).css('backgroundColor');
-      $('#logo').css('color', bg);
+      var bg = jQuery(this).css('backgroundColor');
+      jQuery('#logo').css('color', bg);
     },
     function(){
-      $('#logo').css('color', logo_color);
+      jQuery('#logo').css('color', logo_color);
     }
   );
   var current = 0;
@@ -40,22 +43,22 @@ $(function() {
     "Click on the buttons below to get in touch with me.",
     "I said <strong>below</strong>, so please stop clicking my name! ;-)"
   ];
-  $('h1, h2').click(function(){
+  jQuery('h1, h2').click(function(){
     if(lines.length>current){
-      $('.lines').show().append('<li class="line">'+lines[current]+'</li>');
-      $('footer').css('bottom', '0px');     
+      jQuery('.lines').show().append('<li class="line">'+lines[current]+'</li>');
+      jQuery('footer').css('bottom', '0px');     
     }
     current++;
     if(lines.length==current){
-      $('h1, h2').css('cursor', 'default');
-      $('html, body').animate({
-          scrollTop: $("#links").offset().top
+      jQuery('h1, h2').css('cursor', 'default');
+      jQuery('html, body').animate({
+          scrollTop: jQuery("#links").offset().top
       }, 1000);
     }
     if(current==lines.length+8){
-      $('.lines').append('<li class="line">You never give up, right?</li>');   
-      $('html, body').animate({
-          scrollTop: $("#links").offset().top
+      jQuery('.lines').append('<li class="line">You never give up, right?</li>');   
+      jQuery('html, body').animate({
+          scrollTop: jQuery("#links").offset().top
       }, 1000);   
     }
   })
