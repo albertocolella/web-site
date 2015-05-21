@@ -1,5 +1,8 @@
 # Alberto Colella personal website #
 
+## Install ##
+
+    sudo npm install
 
 ## Build ##
 
