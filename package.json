@@ -3,7 +3,7 @@
   "homepage": "http://albertocolella.com",
   "author": {
     "name": "Alberto Colella"
-  }
+  },
   "scripts": {
     "preinstall": "npm install -g grunt-cli",
     "build-js": "parcelify js/script.js -c build/bundle.css | browserify js/script.js -o build/bundle.js",
