@@ -5,7 +5,7 @@
     "name": "Alberto Colella"
   },
   "scripts": {
-    "preinstall": "npm install -g parcelify browserify less watchify,
+    "preinstall": "npm install -g parcelify browserify less watchify",
     "build-js": "parcelify js/script.js -c build/bundle.css | browserify js/script.js -o build/bundle.js",
     "build-css": "lessc themes/main.less themes/main.css",
     "build": "npm run build-js & npm run build-css" 
