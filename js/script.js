@@ -1,5 +1,6 @@
 global.jQuery = require('jquery');
 require('vegas');
+require('cookiechoices');
 
 jQuery(function() {
   jQuery('body').vegas({

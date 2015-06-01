@@ -25,7 +25,8 @@
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
-    "vegas": "./node_modules/vegas/dist/vegas.min.js"
+    "vegas": "./node_modules/vegas/dist/vegas.min.js", 
+    "cookiechoices": "./node_modules/cookiechoices/cookiechoices.min.js"
   },
   "style": [
     "./node_modules/vegas/dist/vegas.min.css"
