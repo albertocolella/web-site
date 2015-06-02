@@ -14,17 +14,6 @@
   <link rel="icon" href="http://www.albertocolella.com/favicon.ico" />
   <link rel="stylesheet" href="build/bundle.css">
 	<link rel="stylesheet" type="text/css" href="themes/main.css" media="screen" />
-  <script async type="text/javascript" src="build/bundle.js"></script>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-320170-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
   <body>
     <div id="wrapper">
@@ -50,5 +39,59 @@
         </div>
       </footer>
     </div>
+    <script type="text/javascript" src="build/bundle.js"></script>     
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-320170-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(event) {
+        cookieChoices.showCookieConsentBar('This website uses cookies to give you a better experience.',
+          'accept', 'learn more', 'cookie-policy.html', 
+                            function(){
+                              jQuery('#cookieInfo').click(function(e){
+                                e.preventDefault();
+                                jQuery.get(e.target.href, function(data) {
+                                  if(jQuery('#cookieChoiceInfo #popupDialog-placeholder').length==0){
+                                    jQuery('#cookieChoiceInfo').prepend(
+                                      '<div data-role="popup" id="popupDialog" class="ui-corner-all ui-popup ui-body-c ui-overlay-shadow" style="max-width:400px;" ' +
+                                      'data-theme="b" data-overlay-theme="b" data-role="popup" aria-disabled="false" data-disabled="false" data-shadow="true" ' + 
+                                      'data-corners="true" data-transition="none" data-position-to="origin">' +
+                                        '<a class="ui-btn-right ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-notext ui-btn-up-a popup-button-close" data-iconpos="notext" data-icon="delete" '+
+                                        'data-theme="a" data-role="button" data-rel="back" href="#" data-corners="true" data-shadow="true" data-iconshadow="true" ' +
+                                        'data-wrapperels="span" title="Close">' +
+                                          '<span class="ui-btn-inner ui-btn-corner-all">' +
+                                            '<span class="ui-btn-text">Close</span>' +
+                                            '<span class="ui-icon ui-icon-delete ui-icon-shadow"> </span>' +
+                                          '</span>' +
+                                        '</a>' +
+                                        '<div class="ui-corner-top ui-header ui-bar-b" data-theme="b" data-role="header" role="banner">' +
+                                          '<h1 class="ui-title" role="heading" aria-level="1">Cookie policy</h1>' +
+                                        '</div>' +
+                                        '<div class="ui-corner-bottom ui-content ui-body-b" data-theme="b" data-role="content" role="main">' +
+                                          data +
+                                        '</div>' +
+                                      '</div>'
+                                    );
+                                    
+                                    
+                                  }
+                                  var maxHeight = $(window).height() - 120;
+                                  jQuery( "#popupDialog" ).popup().popup( "open" )
+                                  jQuery( "#popupDialog .ui-content" ).css('overflow-y', 'scroll').css('max-height', maxHeight);
+                                  jQuery( "#popupDialog .popup-button-close" ).click(function(){jQuery( "#popupDialog" ).popup('close');});
+                                  jQuery( "#popupDialog .ui-title" ).click(function(){jQuery( "#popupDialog" ).popup('close');});
+                                });                                
+                              });
+                            }
+        );
+      });
+    </script>
   </body>
 </html>

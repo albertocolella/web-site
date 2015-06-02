@@ -1,6 +1,7 @@
-global.jQuery = require('jquery');
+var $ = global.jQuery = global.$ = window.$ = require('jquery');
 require('vegas');
 require('cookiechoices');
+global.$.mobile = require('jquery-mobile');
 
 jQuery(function() {
   jQuery('body').vegas({

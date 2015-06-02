@@ -1,12 +1,5 @@
 # Alberto Colella personal website #
 
-## Install ##
-
-    npm install
-
-or
-
-    sudo npm install --unsafe-perm
 
 ## Build ##
 

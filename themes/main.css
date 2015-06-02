@@ -164,6 +164,19 @@ h2 {
   -ms-user-select: none;
   user-select: none;
 }
+#cookieChoiceInfo {
+  color: #FFF;
+}
+#cookieChoiceInfo a {
+  color: #FFF;
+  background-color: #ccc;
+  border-radius: 4px;
+  padding: 1px 4px;
+  text-decoration: none;
+}
+#cookieChoiceInfo #cookieChoiceDismiss {
+  background-color: #8BC34A;
+}
 html,
 body {
   margin: 0;

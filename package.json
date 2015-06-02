@@ -8,11 +8,12 @@
     "preinstall": "npm install -g parcelify browserify less watchify",
     "build-js": "parcelify js/script.js -c build/bundle.css | browserify js/script.js -o build/bundle.js",
     "build-css": "lessc themes/main.less themes/main.css",
-    "build": "npm run build-js & npm run build-css" 
+    "build": "npm run build-js & npm run build-css"
   },
   "dependencies": {
     "jquery": "^2.1.3",
-    "vegas": "~2.1.2"
+    "vegas": "~2.1.2",
+    "browserify-shim": "~3.8.7"
   },
   "devDependencies": {
     "browserify": "^8.1.3",
@@ -25,11 +26,28 @@
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
-    "vegas": "./node_modules/vegas/dist/vegas.min.js", 
-    "cookiechoices": "./node_modules/cookiechoices/cookiechoices.min.js"
+    "vegas": "./node_modules/vegas/dist/vegas.min.js",
+    "jquery-mobile": "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.js",
+    "cookiechoices": "./js/vendor/cookiechoices/cookiechoices.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "jquery-mobile": {
+      "exports": "$.mobile",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "style": [
-    "./node_modules/vegas/dist/vegas.min.css"
+    "./node_modules/vegas/dist/vegas.min.css",
+    "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.structure.css",
+    "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.theme.css"
   ],
   "repository": {
     "type": "git",

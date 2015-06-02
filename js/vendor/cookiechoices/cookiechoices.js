@@ -14,12 +14,12 @@
  limitations under the License.
  */
 
-(function(window) {
+//(function(window) {
+(function() {
 
   if (!!window.cookieChoices) {
     return window.cookieChoices;
   }
-
   var document = window.document;
   // IE8 does not support textContent, so we should fallback to innerText.
   var supportsTextContent = 'textContent' in document.body;
@@ -31,8 +31,8 @@
     var dismissLinkId = 'cookieChoiceDismiss';
 
     function _createHeaderElement(cookieText, dismissText, linkText, linkHref) {
-      var butterBarStyles = 'position:fixed;width:100%;background-color:#eee;' +
-          'margin:0; left:0; top:0;padding:4px;z-index:1000;text-align:center;';
+      var butterBarStyles = 'position:fixed;width:100%;background-color:#000;' +
+          'margin:0; left:0; bottom:0;padding:4px;z-index:1000;text-align:center;';
 
       var cookieConsentElement = document.createElement('div');
       cookieConsentElement.id = cookieConsentId;
@@ -108,6 +108,7 @@
     function _createInformationLink(linkText, linkHref) {
       var infoLink = document.createElement('a');
       _setElementText(infoLink, linkText);
+      infoLink.id = 'cookieInfo';
       infoLink.href = linkHref;
       infoLink.target = '_blank';
       infoLink.style.marginLeft = '8px';
@@ -120,7 +121,7 @@
       return false;
     }
 
-    function _showCookieConsent(cookieText, dismissText, linkText, linkHref, isDialog) {
+    function _showCookieConsent(cookieText, dismissText, linkText, linkHref, isDialog, callback) {
       if (_shouldDisplayConsent()) {
         _removeCookieConsent();
         var consentElement = (isDialog) ?
@@ -130,11 +131,14 @@
         fragment.appendChild(consentElement);
         document.body.appendChild(fragment.cloneNode(true));
         document.getElementById(dismissLinkId).onclick = _dismissLinkClick;
+        if(callback){
+          callback();
+        }
       }
     }
 
-    function showCookieConsentBar(cookieText, dismissText, linkText, linkHref) {
-      _showCookieConsent(cookieText, dismissText, linkText, linkHref, false);
+    function showCookieConsentBar(cookieText, dismissText, linkText, linkHref, callback) {
+      _showCookieConsent(cookieText, dismissText, linkText, linkHref, false, callback);
     }
 
     function showCookieConsentDialog(cookieText, dismissText, linkText, linkHref) {
