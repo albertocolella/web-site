@@ -63,5 +63,11 @@ jQuery(function() {
           scrollTop: jQuery("#links").offset().top
       }, 1000);   
     }
-  })
+  });
+  // document.addEventListener('DOMContentLoaded', function(event) {
+    cookieChoices.showCookieConsentBar('This website uses cookies to give you a better experience.',
+      'accept', 'learn more', 'cookie-policy.html', 
+                        function(){}
+    );
+  // });
 });
