@@ -101,7 +101,7 @@ h2::before {
 #links .facebook a::before {
   font-size: 30px;
   text-align: right;
-  text-indent: 1012px;
+  /*text-indent: 1012px;*/
   top: 5px;
 }
 #links .linkedin a::before {
@@ -133,29 +133,29 @@ h2::before {
 }
 #links .skype {
   border-radius: 30px;
-  font-size: 5px;
-  overflow: visible;
-}
-#links .skype:before {
-  left: 0;
-  top: 0px;
-}
-#links .skype:before,
-#links .skype:after {
-  background: none repeat scroll 0 0 #00aff0;
-  border-radius: 15px;
-  content: "";
-  height: 15px;
-  position: absolute;
-  width: 15px;
-  z-index: -1;
-}
-#links .skype:after {
-  bottom: 0px;
-  right: 0;
-}
-#links .skype a::before {
-  top: -10px;
+  /*font-size: 5px;
+    overflow: visible;
+    &:before {
+      left: 0;
+      top: 0px;
+    }
+    &:before,
+    &:after {
+        background: none repeat scroll 0 0 @background-skype;
+        border-radius: 15px;
+        content: "";
+        height: 15px;
+        position: absolute;
+        width: 15px;
+        z-index: -1;
+    }
+    &:after {
+        bottom: 0px;
+        right: 0;
+    }
+    a::before {
+      top: -10px;
+    }*/
 }
 #links .skype:hover:before,
 #links .skype:focus:before,
@@ -168,7 +168,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
 }
 footer .credits {
   background-color: #000;
@@ -179,6 +179,7 @@ footer .credits {
   float: right;
   clear: both;
   right: 0;
+  font-size: 11px;
 }
 footer .credits h4 {
   color: #fff;
