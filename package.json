@@ -15,10 +15,9 @@
     "build": "npm run build-files & npm run minify-files"
   },
   "dependencies": {
-    "browserify-shim": "~3.8.7",
-    "font-awesome": "^4.4.0",
     "jquery": "^2.1.3",
-    "vegas": "~2.1.2"
+    "vegas": "~2.1.2",
+    "browserify-shim": "~3.8.7"
   },
   "devDependencies": {
     "browserify": "^8.1.3",
@@ -52,7 +51,6 @@
   },
   "style": [
     "./node_modules/vegas/dist/vegas.min.css",
-    "./node_modules/font-awesome/css/font-awesome.min.css",
     "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.structure.css",
     "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.theme.css"
   ],
