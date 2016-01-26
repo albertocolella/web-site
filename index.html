@@ -218,6 +218,10 @@
       ga('create', 'UA-320170-1', 'auto');
       ga('send', 'pageview');
 
+			setTimeout(function(){
+				ga('send', 'event', 'Profitable Engagement', 'on page more than 5 seconds');
+			},5000);
+
     </script>
   </body>
 </html>
