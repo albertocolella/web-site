@@ -3,10 +3,6 @@
 ## Install ##
 
  - clone the project
- - [install SASS](http://sass-lang.com)
+ - install [SASS](http://sass-lang.com)
  - `npm install`
- - build project with npm
-
-## Build ##
-
-    grunt
+ - `grunt`
