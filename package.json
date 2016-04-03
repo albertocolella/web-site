@@ -4,60 +4,27 @@
   "author": {
     "name": "Alberto Colella"
   },
-  "scripts": {
-    "preinstall": "npm install -g parcelify browserify less watchify minifier",
-    "build-js": "parcelify js/script.js -c build/bundle.css | browserify js/script.js -o build/bundle.js",
-    "build-css": "lessc themes/main.less themes/main.css",
-    "build-files": "npm run build-js & npm run build-css",
-    "minify-js": "minify --output build/bundle.min.js build/bundle.js",
-    "minify-css": "minify --output build/bundle.min.css build/bundle.css & minify --output build/main.min.css themes/main.css",
-    "minify-files": "npm run minify-js & npm run minify-css",
-    "build": "npm run build-files & npm run minify-files"
-  },
+  "scripts": {},
   "dependencies": {
-    "browserify-shim": "~3.8.7",
     "font-awesome": "^4.4.0",
-    "jquery": "^2.1.3",
-    "vegas": "~2.1.2"
+    "jquery": "^2.1.3"
   },
   "devDependencies": {
-    "browserify": "^8.1.3",
-    "less": "~2.5.0",
-    "grunt": "~0.4.5",
-    "grunt-browserify": "~3.7.0",
-    "parcelify": "~1.1.0",
-    "watchify": "~3.2.0",
-    "less-plugin-clean-css": "~1.5.0",
-    "minifier": "~0.6.2"
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1"
   },
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
-    "vegas": "./node_modules/vegas/dist/vegas.min.js",
-    "jquery-mobile": "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.js",
     "cookiechoices": "./js/vendor/cookiechoices/cookiechoices.js"
   },
-  "browserify-shim": {
-    "jquery": "$",
-    "jquery-mobile": {
-      "exports": "$.mobile",
-      "depends": [
-        "jquery:$"
-      ]
-    }
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
   "style": [
-    "./node_modules/vegas/dist/vegas.min.css",
-    "./node_modules/font-awesome/css/font-awesome.min.css",
-    "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.structure.css",
-    "./js/vendor/jquery-mobile-1.4.5/jquery.mobile.custom.theme.css"
+    "./node_modules/font-awesome/css/font-awesome.min.css"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kongoji6/web-site.git#2015"
+    "url": "https://github.com/kongoji6/web-site.git#2016"
   }
 }

@@ -4,10 +4,15 @@ body {
   padding: 0;
   height: 100%;
 }
+
 body {
   background-color: #000000;
+  background: -webkit-linear-gradient(#FFFFFF, #000000);
+  background: -o-linear-gradient(#FFFFFF, #000000);
+  background: -moz-linear-gradient(#FFFFFF, #000000);
+  background: linear-gradient(#FFFFFF, #000000);
 }
-body #wrapper {
+body .wrapper {
   min-height: 100%;
   position: relative;
 }
@@ -15,180 +20,29 @@ body section {
   min-height: 300px;
   margin-bottom: 70px;
 }
-h1.line {
-  background-color: transparent;
-  font-size: 55px;
-  opacity: 1;
-  padding-left: 58px;
-  transform: none;
-  position: relative;
-}
-h2.line {
-  background-color: transparent;
+
+main ul {
   clear: both;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: normal;
-  height: 21px;
-  margin: 0;
-  overflow: hidden;
-  opacity: 1;
-  padding: 0 8px 0 60px;
-  position: relative;
-  text-align: right;
-  visibility: visible;
-  white-space: nowrap;
 }
-h1::before,
-h2::before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  opacity: 0.5;
-  left: 0;
-}
-.lines {
-  clear: both;
+main ul li {
   float: left;
   list-style: outside none none;
-  padding: 0;
-  margin-top: 5px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100px;
 }
-.lines li.line {
-  margin-top: 0px;
-  font-size: 16px;
-  background-color: transparent;
-  color: #ffffff;
-  opacity: 1;
-  margin-bottom: 5px;
-  position: relative;
+main ul li a {
+  font-size: 5em;
+  color: #FFFFFF;
 }
-.lines li.line:before {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: #000000;
-  opacity: 0.8;
-  left: 0;
-}
-#links {
-  float: left;
-  clear: both;
-  margin: 0 0 100px 11px;
-}
-#links li {
-  border-radius: 20px;
-  -webkit-transition: border-radius 500ms ease-out;
-  -moz-transition: border-radius 500ms ease-out;
-  -o-transition: border-radius 500ms ease-out;
-  transition: border-radius 500ms ease-out;
-  font-size: 30px;
-  width: 30px;
-  height: 30px;
-}
-#links li:hover,
-#links li:focus {
-  transition: border-radius 500ms ease-out;
-  border-radius: 10px;
-}
-#links .facebook a::before {
-  font-size: 30px;
-  text-align: right;
-  /*text-indent: 1012px;*/
-  top: 5px;
-}
-#links .linkedin a::before {
-  font-size: 18px;
-  margin-top: 0;
-  text-indent: 1010px;
-  top: 9px;
-}
-#links .google a::before {
-  font-size: 24px;
-  margin-top: -2px;
-  text-indent: 1003px;
-  font-weight: normal;
-}
-#links .google a::after {
-  font-size: 15px;
-  font-weight: bold;
-  margin-left: 0;
-  margin-top: 5px;
-  text-indent: 927px;
-}
-#links .twitter {
-  background-position: 5px 9px;
-  background-size: 22px 17px;
-}
-#links .github {
-  background-position: 3px 3px;
-  background-size: 24px 24px;
-}
-#links .skype {
-  border-radius: 30px;
-  /*font-size: 5px;
-    overflow: visible;
-    &:before {
-      left: 0;
-      top: 0px;
-    }
-    &:before,
-    &:after {
-        background: none repeat scroll 0 0 @background-skype;
-        border-radius: 15px;
-        content: "";
-        height: 15px;
-        position: absolute;
-        width: 15px;
-        z-index: -1;
-    }
-    &:after {
-        bottom: 0px;
-        right: 0;
-    }
-    a::before {
-      top: -10px;
-    }*/
-}
-#links .skype:hover:before,
-#links .skype:focus:before,
-#links .skype:hover:after,
-#links .skype:focus:after {
-  transition: height 500ms ease-in;
-  height: 0px;
-}
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 40px;
 }
-footer .credits {
-  background-color: #000;
-  bottom: 2px;
-  opacity: 0.6;
-  padding: 5px;
-  position: relative;
-  float: right;
-  clear: both;
-  right: 0;
-  font-size: 11px;
-}
-footer .credits h4 {
-  color: #fff;
-  margin: 0;
-  opacity: 1;
-  padding: 0;
-}
-footer .credits a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-}
+
+/*# sourceMappingURL=main.css.map */
