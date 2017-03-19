@@ -4,27 +4,22 @@
   "author": {
     "name": "Alberto Colella"
   },
-  "scripts": {},
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
   "dependencies": {
-    "font-awesome": "^4.4.0",
-    "jquery": "^2.1.3"
+    "font-awesome": "^4.4.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-concat": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^1.0.1"
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.27.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "webpack": "^2.2.1"
   },
-  "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.min.js",
-    "cookiechoices": "./js/vendor/cookiechoices/cookiechoices.js"
-  },
-  "style": [
-    "./node_modules/font-awesome/css/font-awesome.min.css"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kongoji6/web-site.git#2016"
+    "url": "https://github.com/albertocolella/web-site.git#2017"
   }
 }
