@@ -5,21 +5,22 @@
     "name": "Alberto Colella"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config=webpack.config.js"
   },
   "dependencies": {
     "font-awesome": "^4.4.0"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^4.0.1",
-    "css-loader": "^0.27.3",
-    "extract-text-webpack-plugin": "^2.1.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.1.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.5.0",
-    "sass-loader": "^6.0.3",
-    "webpack": "^2.2.1"
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/albertocolella/web-site.git#2017"
+    "url": "https://github.com/albertocolella/web-site.git#2019"
   }
 }
