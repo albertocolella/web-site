@@ -1,8 +1,10 @@
 /* Variables */
 $color-black:        #000000;
 $color-white:        #FFFFFF;
-$background-color-1:   #FFFFFF;
-$background-color-2:   #000000;
+$brand-color_facebook:   #3b5998;
+$brand-color_github:   #333;
+$brand-color_linkedin:   #0077b5;
+$brand-color_twitter:   #1da1f2;
 
 html,
 body {
@@ -11,14 +13,14 @@ body {
    height:100%;
 }
 body {
-  background-color:$color-black;
-  background: -webkit-linear-gradient($background-color-1, $background-color-2);
-  background: -o-linear-gradient($background-color-1, $background-color-2);
-  background: -moz-linear-gradient($background-color-1, $background-color-2);
-  background: linear-gradient($background-color-1, $background-color-2);
+  background-color:$color-white;
+  text-align: center;
   .wrapper {
     min-height:100%;
     position:relative;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
   }
   section {
     min-height: 300px;
@@ -26,26 +28,64 @@ body {
   }
 }
 
-main ul {
-  clear: both;
-  li {
-    float: left;
-    list-style: outside none none;
-    margin-bottom: 50px;
-    margin-left: 50px;
-    text-align: center;
-    vertical-align: middle;
-    width: 100px;
-    a {
-      font-size: 5em;
-      color: $color-white;
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: outside none none;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      text-align: center;
+      vertical-align: middle;
+      min-width: 100px;
+      a,
+      a:visited {
+        font-size: 3em;
+        -webkit-transition: font-size 1s ease-out;
+        transition: font-size 1s ease-out;
+        &.facebook {
+          color: $brand-color_facebook;
+        }
+        &.github {
+          color: $brand-color_github;
+        }
+        &.linkedin {
+          color: $brand-color_linkedin;
+        }
+        &.twitter {
+          color: $brand-color_twitter;
+        }
+        &.instagram svg * {
+          fill: url(#rg);
+        }      
+      }
+      a:hover {
+        font-size: 5em;
+        /*-webkit-transition: font-size 1s; 
+        transition: font-size 1s;*/
+      }
     }
   }
 }
 
 footer {
-  position:fixed;
   bottom:0;
-  width:100%;
-  height:40px;
+}
+
+@media only screen and (max-width: 785px) {
+  main {
+    ul {
+      li {
+        margin-bottom: 50px;
+      }
+    }
+  }
 }
