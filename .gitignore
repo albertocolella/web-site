@@ -3,4 +3,7 @@ build
 /.project
 .sass-cache
 
-public/
+public/*
+!public/.keep
+
+npm-debug.log

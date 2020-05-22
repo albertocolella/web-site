@@ -1,6 +1,6 @@
 /* Variables */
-$color-black:        #000000;
-$color-white:        #FFFFFF;
+$color-black:        #100D09;
+$color-white:        #f7f5f7;
 $brand-color_facebook:   #3b5998;
 $brand-color_github:   #333;
 $brand-color_linkedin:   #0077b5;
@@ -13,8 +13,9 @@ body {
    height:100%;
 }
 body {
-  background-color:$color-white;
+  background-color: $color-white;
   text-align: center;
+  color: $color-black;
   .wrapper {
     min-height:100%;
     position:relative;
@@ -87,5 +88,12 @@ footer {
         margin-bottom: 50px;
       }
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color:$color-black;
+    color: $color-white;
   }
 }
