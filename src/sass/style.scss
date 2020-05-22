@@ -34,6 +34,9 @@ main {
   align-items: center;
   justify-content: center;
   flex: 1 1 auto;
+  h1 {
+    opacity: 1;
+  }
   ul {
     display: flex;
     flex-direction: column;
@@ -50,8 +53,9 @@ main {
       a,
       a:visited {
         font-size: 3em;
-        -webkit-transition: font-size 1s ease-out;
-        transition: font-size 1s ease-out;
+        -webkit-transition: font-size 1s, opacity .5s ease-out;
+        transition: font-size 1s, opacity .5s ease-out;
+        opacity: 1;
         &.facebook {
           color: $brand-color_facebook;
         }
@@ -70,8 +74,7 @@ main {
       }
       a:hover {
         font-size: 5em;
-        /*-webkit-transition: font-size 1s; 
-        transition: font-size 1s;*/
+        opacity: 1;
       }
     }
   }
@@ -95,5 +98,18 @@ footer {
   body {
     background-color:$color-black;
     color: $color-white;
+    main {
+      h1 {
+        opacity: .50;
+      }
+      ul {
+        li {
+          a,
+          a:visited {
+            opacity: .50;
+          }
+        }
+      }
+    }
   }
 }
